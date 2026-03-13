@@ -9,13 +9,8 @@ test_postcode_cli.py ...............................                     [ 48%]
 test_postcode_functions.py ............................................. [ 98%]
 .                                                                        [100%]
 
-============================== 90 passed in 5.69s ==============================
-************* Module postcode_functions
-postcode_functions.py:35:15: W3101: Missing timeout argument for method 'req.get' can cause your program to hang indefinitely (missing-timeout)
-postcode_functions.py:58:15: W3101: Missing timeout argument for method 'req.get' can cause your program to hang indefinitely (missing-timeout)
-postcode_functions.py:79:15: W3101: Missing timeout argument for method 'req.get' can cause your program to hang indefinitely (missing-timeout)
-postcode_functions.py:103:15: W3101: Missing timeout argument for method 'req.post' can cause your program to hang indefinitely (missing-timeout)
+============================== 90 passed in 6.11s ==============================
 
-------------------------------------------------------------------
-Your code has been rated at 9.52/10 (previous run: 9.52/10, +0.00)
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
 
