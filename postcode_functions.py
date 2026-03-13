@@ -33,7 +33,7 @@ def validate_postcode(postcode: str) -> bool:
         return cache[postcode]["valid"]
 
     response = req.get(
-        f"https://api.postcodes.io/postcodes/{postcode}/validate")
+        f"https://api.postcodes.io/postcodes/{postcode}/validate", timeout=5)
 
     if response.status_code != 200:
         raise req.RequestException("Unable to access API.")
@@ -49,14 +49,14 @@ def validate_postcode(postcode: str) -> bool:
 
 
 def get_postcode_for_location(lat: float, long: float) -> str:
-    """get postcode for a location by longtitude and latitude"""
+    """get postcode for a location by longitude and latitude"""
     if not isinstance(lat, float):
         raise TypeError("Function expects two floats.")
     if not isinstance(long, float):
         raise TypeError("Function expects two floats.")
 
     response = req.get(
-        f"https://api.postcodes.io/postcodes?lon={long}&lat={lat}")
+        f"https://api.postcodes.io/postcodes?lon={long}&lat={lat}", timeout=5)
 
     if response.status_code != 200:
         raise req.RequestException("Unable to access API.")
@@ -77,7 +77,7 @@ def get_postcode_completions(postcode_start: str) -> list[str]:
         return cache[postcode_start]["completions"]
 
     response = req.get(
-        f"https://api.postcodes.io/postcodes/{postcode_start}/autocomplete")
+        f"https://api.postcodes.io/postcodes/{postcode_start}/autocomplete", timeout=5)
 
     if response.status_code != 200:
         raise req.RequestException("Unable to access API.")
@@ -101,7 +101,7 @@ def get_postcodes_details(postcodes: list[str]) -> dict:
             raise TypeError("Function expects a list of strings.")
 
     response = req.post("https://api.postcodes.io/postcodes",
-                        json={"postcodes": postcodes})
+                        json={"postcodes": postcodes}, timeout=5)
 
     if response.status_code != 200:
         raise req.RequestException("Unable to access API.")
