@@ -1,6 +1,6 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.12.12, pytest-9.0.2, pluggy-1.6.0
-rootdir: /home/runner/work/Assessment-Networking-Week-1/Assessment-Networking-Week-1
+platform linux -- Python 3.12.13, pytest-9.0.3, pluggy-1.6.0
+rootdir: /home/runner/work/networking-week1-exam/networking-week1-exam
 plugins: requests-mock-1.12.1
 collected 90 items
 
@@ -9,7 +9,7 @@ test_postcode_cli.py ...............................                     [ 48%]
 test_postcode_functions.py ............................................. [ 98%]
 .                                                                        [100%]
 
-============================== 90 passed in 6.11s ==============================
+============================== 90 passed in 5.99s ==============================
 
 --------------------------------------------------------------------
 Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
